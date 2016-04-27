@@ -1,0 +1,14 @@
+<launch>
+    <!-- GDB functionality -->
+    <arg name="tf_prefix" default="" />
+    <arg name="debug" default="false" />
+    <arg name="publish_robot_state" default="true" />
+    <arg unless="$(arg debug)" name="launch_prefix" value="" />
+    <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+    <arg name="robot_ip_address" default="172.27.1.2" />
+
+    <arg name="controllers"  />
+
+    <param name="robot_ip_address" value="$(arg robot_ip_address)" />
+
+</launch>

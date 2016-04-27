@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="$(find robotino_description3)/urdf/robotino_body.urdf.xacro"/>
+  <xacro:include filename="$(find robotino_description3)/urdf/robotino_parts.urdf.xacro"/>
+    <xacro:include filename="$(find robotino_arm_description)/xacro/arm_model.urdf.xacro"/>
+
+    <xacro:macro name="arm_on_robotino" params="base_as_joint">
+
+        <link name="odomp"/>
+        <xacro:if value="${base_as_joint}">
+            <joint name="rotatory" type="continuous">
+                <parent link="odomp"/>
+                <child link="base_link"/>
+                <axis xyz="0 0 1" />
+            </joint>
+        </xacro:if>
+        <xacro:unless value="${base_as_joint}">
+            <joint name="rotatory" type="fixed">
+                <parent link="odomp"/>
+                <child link="base_link"/>
+            </joint>
+        </xacro:unless>
+
+        <xacro:robotino_body/>
+
+        <joint name="fixed_base_link_base" type="fixed">
+            <parent link="base_link"/>
+            <child link="base"/>
+            <origin xyz="0.0 0.0 0.185" rpy="0 0 -1.0471975511965976" />
+        </joint>
+
+        <xacro:arm />
+
+    </xacro:macro>
+</robot>

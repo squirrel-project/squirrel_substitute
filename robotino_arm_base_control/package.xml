@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <name>robotino_arm_base_control</name>
+  <version>0.1.0</version>
+  <description>The robotino_arm_base_control package</description>
+  <maintainer email="lenz@cognitionfactory.eu">Claus Lenz</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <export></export>
+</package>
