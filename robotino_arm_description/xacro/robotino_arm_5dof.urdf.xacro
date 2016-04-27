@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="robotino_arm_5dof" xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:include filename="$(find robotino_arm_description)/xacro/robotino_arm.urdf.xacro"/>
+
+    <xacro:arm_on_robotino base_as_joint="false" />
+</robot>

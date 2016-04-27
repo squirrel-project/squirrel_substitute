@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot name="arm" xmlns:xacro="http://wiki.ros.org/xacro">
+  <xacro:include filename="$(find robotino_arm_description)/xacro/arm_model.urdf.xacro"/>
+
+  <xacro:arm />
+</robot>
