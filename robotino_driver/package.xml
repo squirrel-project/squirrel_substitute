@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <name>robotino_driver</name>
+  <version>0.0.0</version>
+  <description>The robotino_driver package</description>
+
+
+  <maintainer email="todo@todo.todo">todo</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
